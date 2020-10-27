@@ -2,31 +2,31 @@ import React from 'react';
 import {FaBars} from 'react-icons/fa'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements';
 
-const Navbar = () => {
+const Navbar = ({ toogle }) => {
     return (
      <>
         <Nav>
             <NavbarContainer>
-                <NavLogo to='/'>Ruby</NavLogo>
-                <MobileIcon>
+                <NavLogo to='/'>Ruby™</NavLogo>
+                <MobileIcon onClick={toogle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to='about'>O Bocie</NavLinks>
+                        <NavLinks to='about'>Twórcy</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='discover'>Discord</NavLinks>
+                        <NavLinks to='discover'>O Bocie</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='services'>Zalety</NavLinks>
+                        <NavLinks to='services'>Bezpieczeństwo</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to='singup'>Zaproś bota</NavLinks>
+                        <NavLinks to='stats'>Statystyki</NavLinks>
                     </NavItem>
                 </NavMenu>
                 <NavBtn>
-                    <NavBtnLink to='/panel'>Panel</NavBtnLink>
+                    <NavBtnLink onClick={()=> window.open("https://redirect.rubybot.pl/zaproszenie/")}>Zaproś bota</NavBtnLink>
                 </NavBtn>
             </NavbarContainer>
         </Nav>
