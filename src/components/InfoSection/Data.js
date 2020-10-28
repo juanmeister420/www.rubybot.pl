@@ -13,6 +13,7 @@ export const homeObjOne = {
     dark: true,
     primary: true,
     darkText: false,
+    link: 'https://dc.rubybot.pl/'
 }
 
 export const homeObjTwo = {
@@ -31,7 +32,7 @@ export const homeObjTwo = {
     primary: true,
     darkText: false,
     ZaprosPrzyciskText: "Zaproś Bota",
-    akcjaButton: "https://redirect.rubybot.pl/zaproszenie/"
+    link: 'https://redirect.rubybot.pl/zaproszenie/'
 }
 
 
@@ -50,6 +51,7 @@ export const homeObjThree = {
     dark: true,
     primary: true,
     darkText: false,
+    link: 'https://rubybot.pl/bezpieczeństwo/'
 }
 
 export const homeObjFour = {
@@ -67,4 +69,5 @@ export const homeObjFour = {
     dark: true,
     primary: true,
     darkText: false,
+    link: 'https://rubybot.pl/statystyki/'
 }
