@@ -1,9 +1,12 @@
 import React from 'react';
-import { Button } from '../ButtonElements';
+import { Button2 } from '../ButtonElements';
+import { useHistory } from 'react-router';
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Img, ImgWrap } from './InfoElements';
 
-const InfoSection = ({lightBg, id, topLine, imgStart, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2 }) => {
+const InfoSection = ({lightBg, id, topLine, imgStart, lightText, headline, darkText, description, buttonLabel, img, alt, link }) => {
+    const { push } = useHistory()
     return (
+        
         <>
             <InfoContainer lightBg={lightBg} id={id}>
                 <InfoWrapper>
@@ -14,17 +17,9 @@ const InfoSection = ({lightBg, id, topLine, imgStart, lightText, headline, darkT
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
                             <BtnWrap>
-                                <Button to='home' 
-                                smooth={true}
-                                duration={500}
-                                spy={true}
-                                exact="true"
-                                offset={-80}
-                                primary={primary ? 1 : 0}
-                                dark={dark ? 1 : 0}
-                                dark2={dark2 ? 1 : 0}
-                                >{buttonLabel}
-                                </Button>
+                                <Button2 onClick={()=> window.open(link,"_self")}>
+                                    {buttonLabel}
+                                </Button2>
                             </BtnWrap>
                         </TextWrapper>
                         </Column1>

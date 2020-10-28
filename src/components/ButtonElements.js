@@ -26,11 +26,9 @@ export const Button = styled(Link)`
     }
 `;
 
-export const ZaprosButton = styled(Link)`
-    border-radius: 5px;
-    border-color: #ff7105;
-    opacity: 0.9;
-    background: ${({primary}) => (primary ? '#ff7105' : ' #010606')};
+export const Button2 = styled(Link)`
+    background: #ff7105;
+    border-radius: 3px;
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
     color: ${({dark}) => (dark ? '#010606' : '#fff')};
@@ -44,9 +42,10 @@ export const ZaprosButton = styled(Link)`
     transition: all 0.2 ease-in-out;
 
     &:hover{
-        transition: all 0.2s ease-in-out;
+        transition: all 0.4s ease-in-out;
         background: #ff7105;
         color: #fff;
         opacity: 1.1;
+        border-radius: 15px;
     }
 `;
